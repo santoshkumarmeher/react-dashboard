@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import Header from './components/Header.js';
-import DataUpload from './components/DataUpload.js';
-import Dashboard from './components/Dashboard.js';
-import CustomizationPanel from './components/CustomizationPanel.js';
+import Header from './components/Header.jsx';
+import DataUpload from './components/DataUpload.jsx';
+import Dashboard from './components/Dashboard.jsx';
+import CustomizationPanel from './components/CustomizationPanel.jsx';
 import { useLocalStorage } from './hooks/useLocalStorage.js';
 import { generateSampleData } from './utils/dataProcessor.js';
 
@@ -79,12 +79,6 @@ function App() {
         alert('Error exporting PDF. Please try again.');
       }
     }
-  };
-
-  const loadSampleData = () => {
-    const sampleData = generateSampleData();
-    setData(sampleData);
-    setShowUpload(false);
   };
 
   return (
